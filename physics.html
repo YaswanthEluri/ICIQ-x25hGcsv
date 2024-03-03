@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Timer</title>
+  <style>
+    #timer {
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+    #pdfContainer {
+      width: 100%;
+      height: 600px; /* Adjust the height as needed */
+    }
+  </style>
+</head>
+<body>
+  <div id="timer">00:00:00</div>
+
+  <div id="pdfContainer">
+    <!-- Replace 'your-pdf-file.pdf' with the actual path to your PDF file -->
+    <iframe src="C:\Users\saibh\OneDrive\Desktop\Chaos_Fractal_Geometry.pdf" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+  <div id="pdfContainer">
+    <!-- Replace 'your-pdf-file.pdf' with the actual path to your PDF file -->
+    <iframe src="C:\Users\saibh\OneDrive\Desktop\Projectile_Motion_2010.pdf" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    // Function to update the timer
+    function updateTimer() {
+      seconds++;
+      var hours = Math.floor(seconds / 3600);
+      var minutes = Math.floor((seconds % 3600) / 60);
+      var secs = seconds % 60;
+
+      // Add leading zeros to single-digit minutes and seconds
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      secs = secs < 10 ? "0" + secs : secs;
+
+      // Update the timer display
+      document.getElementById("timer").textContent = hours + ":" + minutes + ":" + secs;
+    }
+
+    // Variable to store the elapsed time in seconds
+    var seconds = 0;
+
+    // Update the timer every second
+    setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .module-box {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="module-box">
+        <b><a href="C:\Users\saibh\OneDrive\Desktop\Chaos_Fractal_Geometry.pdf">MODULE 1.1: CHAOS</a></b><br>
+        <h3>BORED?</h3>
+        <button id="runSimulationButton1">CLICK HERE</button>
+        <br><br>
+        <b><a href="C:\Users\saibh\OneDrive\Desktop\Projectile_Motion_2010.pdf">MODULE 1.2: PROJECTILE MOTION</a></b><br>
+       
+    </div>
+
+    <script>
+        // Function to handle button click event for Module 1.1
+        document.getElementById('runSimulationButton1').addEventListener('click', function() {
+            // Open the simulation result file in a new tab or window
+            window.open('file:///C:/Users/saibh/OneDrive/Desktop/dashboard/chaos/index.html#./examples/chaos_pool_table.html', '_blank');
+        });
+
+      
+    </script>
+</body>
+</html>
